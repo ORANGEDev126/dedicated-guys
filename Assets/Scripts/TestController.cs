@@ -31,7 +31,7 @@ public class TestController : NetworkBehaviour
 
     private void Move()
     {
-        if(IsServer)
+        if(IsServer && IsOwner)
         {
             position.Value = MakeRandomVector();
             transform.position = position.Value;
